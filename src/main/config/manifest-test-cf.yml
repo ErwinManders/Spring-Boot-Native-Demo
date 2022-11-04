@@ -1,0 +1,9 @@
+applications:
+  - name: Spring-Boot-Native-Demo
+    path: .
+    env:
+      SPRING_PROFILES_ACTIVE: default,test
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
+    buildpacks:
+      - binary_buildpack
+    command: chmod 755 springbootnativedemo && ./springbootnativedemo
